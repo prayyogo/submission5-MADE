@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Film Favorite</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="movies_favorite">Movies Favorite</string>
+    <string name="tv_shows_favorite">TV Shows Favorite</string>
+    <string name="name_films">Film Name</string>
+    <string name="lorem">lorem ipsum dolor sit amet</string>
+    <string name="release_date">Release Date:</string>
+    <string name="genre">Genre:</string>
+    <string name="popularity">Popularity:</string>
+    <string name="rating_user">Rating User:</string>
+    <string name="description">Description:</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="language">en-US</string>
+    <string name="film_favorite">Film Favorite</string>
+    <string name="favorite">Favorite</string>
+    <string name="delete">Delete</string>
+</resources>

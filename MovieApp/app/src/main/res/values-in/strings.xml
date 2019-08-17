@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="movies">Film</string>
+    <string name="tv_shows">Serial TV</string>
+    <string name="movies_favorite">Favorit Movies</string>
+    <string name="tv_shows_favorite">Favorit TV Shows</string>
+    <string name="name_films">Nama Film:</string>
+    <string name="lorem">lorem ipsum dolor sit amet</string>
+    <string name="release_date">Tanggal Rilis:</string>
+    <string name="genre">Genre:</string>
+    <string name="popularity">Popularitas:</string>
+    <string name="rating_user">Rating Penonton:</string>
+    <string name="description">Deskripsi:</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="language">id-ID</string>
+    <string name="film_favorite">Favorit Film</string>
+    <string name="favorite">Favorit</string>
+    <string name="delete">Hapus</string>
+    <string name="no_data">TIDAK ADA DATA</string>
+    <string name="retry">ULANG</string>
+    <string name="appwidget_text">FAVORIT FILM SAYA</string>
+    <string name="add_widget">Tambah Widget</string>
+    <string name="search">Cari Judul Film</string>
+    <string name="add_favorite">telah ditambahkan ke favorite</string>
+    <string name="delete_favorite">telah dihapus favorite</string>
+    <string name="error_message">Terjadi kesalahan, Silahkan ulangi lagi!</string>
+    <string name="no_film_today">Tidak ada film hari ini</string>
+    <string name="on">dinyalakan</string>
+    <string name="off">dimatikan</string>
+    <string name="daily_title">Apa yang baru?</string>
+    <string name="daily_desc">Cek film terkini!</string>
+    <string name="today_release">Film telah rilis!</string>
+    <string name="notifications">Notifikasi</string>
+    <string name="change_notification_settings">Ubah Pengaturan Notifikasi</string>
+    <string name="summary_daily_reminder">Kamu akan menerima pengingat harian setiap jam 7 pagi</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="summary_release_reminder">YKamu akan menerima informasi rilis film harian setiap jam 8 pagi</string>
+    <string name="release_reminder">Pengingat Film Baru</string>
+</resources>

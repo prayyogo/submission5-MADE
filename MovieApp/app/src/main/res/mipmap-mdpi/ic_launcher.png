@@ -1,0 +1,61 @@
+package com.dicoding.picodiploma.mypreloaddata.services;
+
+import android.content.res.Resources;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.dicoding.picodiploma.mypreloaddata.R;
+import com.dicoding.picodiploma.mypreloaddata.database.MahasiswaHelper;
+import com.dicoding.picodiploma.mypreloaddata.model.MahasiswaModel;
+import com.dicoding.picodiploma.mypreloaddata.prefs.AppPreference;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+
+
+public class LoadDataAsync extends AsyncTask<Void, Integer, Boolean> {
+    private final String TAG = LoadDataAsync.class.getSimpleName();
+    private MahasiswaHelper mahasiswaHelper;
+    private AppPreference appPreference;
+    private WeakReference<LoadDataCallback> weakCallback;
+    private WeakReference<Resources> weakResources;
+    double progress;
+    double maxprogress = 100;
+
+    LoadDataAsync(MahasiswaHelper mahasiswaHelper, AppPreference preference, LoadDataCallback callback, Resources resources) {
+        this.mahasiswaHelper = mahasiswaHelper;
+        this.appPreference = preference;
+        this.weakCallback = new WeakReference<>(callback);
+        this.weakResources = new WeakReference<>(resources);
+    }
+
+    /*
+    Persiapan sebelum proses dimulai
+    Berjalan di Main Thread
+     */
+    @Override
+    protected void onPreExecute() {
+        weakCallback.get().onPreLoad();
+    }
+
+    /*
+    Proses background terjadi di method doInBackground
+     */
+    @Override
+    protected Boolean doInBackground(Void... params) {
+        // Panggil preference first run
+        Boolean firstRun = appPreference.getFirstRun();
+        /*
+         * Jika first run true maka melakukan proses pre load,
+         * Jika first run false maka akan langsung menuju home
+         */
+        if (firstRun) {
+            /*
+            Load raw data dari file txt ke dalam array model mahasiswa
+            */
+            ArrayList<MahasiswaModel> mahasiswaModels = preLoadRaw();
+
+      
